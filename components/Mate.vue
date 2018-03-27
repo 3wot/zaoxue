@@ -1,7 +1,7 @@
 <template>
   <div class="mate">
-
-    <h1>circle</h1>
+    <button>aaaaa</button>
+    <h1 id="circle" @click="fnA">circle</h1>
 
 
 
@@ -25,7 +25,12 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  methods:{
+    
   }
+
+  
 }
 </script>
 
