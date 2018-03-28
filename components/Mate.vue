@@ -1,8 +1,7 @@
 <template>
   <div class="mate">
     <button>aaaaa</button>
-    <h1 id="circle" @click="fnA">circle</h1>
-
+    
 
 
 

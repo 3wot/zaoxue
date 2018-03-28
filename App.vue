@@ -14,6 +14,7 @@ export default {
 <style>
 
 html,body,#app{
+  font-family: yahei;
   width: 100%;
   height: 100%;
   padding: 0px;

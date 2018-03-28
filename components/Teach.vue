@@ -1,22 +1,68 @@
 <template>
   <div class="teach">
 
-  <div class="panel">
-    <mt-swipe :auto="4000">
-      <mt-swipe-item>
-        <img src="../assets/logo.png">
-      </mt-swipe-item>
-      <mt-swipe-item>
-        <img src="../assets/logo.png">
-      </mt-swipe-item>
-      <mt-swipe-item>
-        <img src="../assets/logo.png">
-      </mt-swipe-item>
-    </mt-swipe>
+  <!-- 顶部 -->
+  <mt-header fixed title="固定在顶部">
+  	
 
-  </div>
-  <div class="panel"></div>
-  <div class="panel"></div>
+  </mt-header>
+
+  <div class="content-in">
+
+  	<div class="panel">
+  		<div class="panel-in">
+  			<mt-swipe :auto="0">
+  		  <mt-swipe-item>
+  		  	<img src="../assets/111.png">
+  		  </mt-swipe-item>
+  		  <mt-swipe-item>
+  		  	<img src="../assets/222.png">
+  		  </mt-swipe-item>
+  		  <mt-swipe-item>
+  		  	<img src="../assets/333.png">
+  		  </mt-swipe-item>
+  		</mt-swipe>
+  		</div>
+      
+  	</div>
+
+
+		<div class="m-sm radius">
+			<div class="panel">
+			  	<div class="panel-in">
+			  		<img src="../assets/333.png">
+			  		<div class="font-middle">
+			  			<h2 class="font-white font-20 text-center">我的加血</h2>
+			  		</div>
+			  	</div>
+		  </div>	
+		</div>
+		
+    <div class="m-sm radius">
+      <div class="panel">
+          <div class="panel-in">
+            <img src="../assets/333.png">
+            <div class="font-middle">
+              <h2 class="font-white font-20 text-center">我的加血</h2>
+            </div>
+          </div>
+      </div>  
+    </div>
+
+    <div class="m-sm radius">
+      <div class="panel">
+          <div class="panel-in">
+            <img src="../assets/333.png">
+            <div class="font-middle">
+              <h2 class="font-white font-20 text-center">我的加血</h2>
+            </div>
+          </div>
+      </div>  
+    </div>
+
+	 
+   </div>
+  
     
 
 
@@ -29,7 +75,8 @@
 <script>
 import { Header } from 'mint-ui'
 import { Tabbar, TabItem } from 'mint-ui'
-import { Swipe, SwipeItem } from 'mint-ui';
+import { Swipe, SwipeItem } from 'mint-ui'
+import { Cell } from 'mint-ui';
 
 
 // Vue.component(Tabbar.name, Tabbar);
@@ -37,7 +84,7 @@ import { Swipe, SwipeItem } from 'mint-ui';
 
 export default {
   components:{
-    Header,Tabbar,TabItem,Swipe,SwipeItem
+    Header,Tabbar,TabItem,Swipe,SwipeItem,Cell
   },
   name: 'Teach',
   data () {
@@ -57,9 +104,53 @@ export default {
   top: 0px;
   bottom: 55px;
 }
-.teach>.panel{
+.teach .panel{
   width: 100%;
   padding-top: 56.25%;
+  position: relative;
 }
+.panel .panel-in{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;	
+}
+.content-in{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 40px;
+  bottom: 0px;
+  overflow: auto;
+}
+.panel img{
+  width: 100%;
+  height: 100%;
+}
+.m-sm{
+  margin: 10px;
+}
+.radius{
+	border-radius: 7px;
+	overflow: hidden;
+}
+.font-middle{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.font-white{
+	color: #ffffff;
+}
+.font-20{
+	font-size: 20px;
+}
+
 
 </style>
