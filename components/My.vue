@@ -1,9 +1,44 @@
 <template>
   <div class="my">
 
+    <div class="panel">
+        <div class="panel-in">
+          <img src="../assets/bg.png">
+          <div class="font-middle">
+            <img class="img-r-70" src="../assets/person.png">
+            <h2 class="font-white">登录</h2>
+          </div>
+        </div>
+    </div>
+
+    <div>
+      <div class="line-b">
+        <mt-cell title="我的收藏" is-link to="/">
+          <!-- <span></span> -->
+          <img slot="icon" src="../assets/logo.png" width="24" height="24">
+        </mt-cell>
+      </div>
+      
+
+      <!-- <div class="line-b">
+        <mt-cell title="标题文字" is-link>
+          <span>我的</span>
+          <img slot="icon" src="../assets/logo.png" width="24" height="24">
+        </mt-cell>
+      </div>
+      
+      <div class="line-b">
+        <mt-cell title="标题文字" is-link>
+          <span>我的</span>
+          <img slot="icon" src="../assets/logo.png" width="24" height="24">
+        </mt-cell>
+      </div>
+ -->
+
+    </div>
 
 
-    <h1>my</h1>
+  
 
 
 
@@ -15,13 +50,14 @@
 <script>
 import { Header } from 'mint-ui';
 import { Tabbar, TabItem } from 'mint-ui';
+import { Cell } from 'mint-ui';
 
 // Vue.component(Tabbar.name, Tabbar);
 // Vue.component(TabItem.name, TabItem);
 
 export default {
   components:{
-    Header,Tabbar,TabItem
+    Header,Tabbar,TabItem,Cell
   },
   name: 'My',
   data () {
@@ -29,6 +65,9 @@ export default {
       msg: 'Welcome to Your Vue.js App',
     }
   }
+
+
+
 }
 </script>
 
@@ -41,5 +80,52 @@ export default {
   top: 0px;
   bottom: 55px;
 }
+.my .panel{
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+}
+.panel .panel-in{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px; 
+}
+.content-in{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 40px;
+  bottom: 0px;
+  overflow: auto;
+}
+.img-r-70{
+  height: 70px !important;
+  width: 70px !important;
+  border-radius: 50%;
+}
+.panel img{
+  width: 100%;
+  height: 100%;
+}
+.font-middle{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column ;
+    justify-content: center;
+}
+.font-white{
+  color: #ffffff;
+}
+.line-b{
+  border-bottom: 1px solid #dddddd;
+}
+
 
 </style>

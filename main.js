@@ -2,9 +2,12 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+// frozenui
+// import './style/frozenui.css'
 // mint-ui
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
+
 
 import router from './router'
 

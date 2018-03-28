@@ -14,13 +14,15 @@ export default {
 <style>
 
 html,body,#app{
-  font-family: yahei;
   width: 100%;
   height: 100%;
   padding: 0px;
   margin: 0px;
 }
 #app {
-
+  
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>

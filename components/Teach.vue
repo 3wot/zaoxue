@@ -32,7 +32,7 @@
 			  	<div class="panel-in">
 			  		<img src="../assets/333.png">
 			  		<div class="font-middle">
-			  			<h2 class="font-white font-20 text-center">我的加血</h2>
+			  			<h3 class="font-white text-center">我的加血</h3>
 			  		</div>
 			  	</div>
 		  </div>	
@@ -43,7 +43,7 @@
           <div class="panel-in">
             <img src="../assets/333.png">
             <div class="font-middle">
-              <h2 class="font-white font-20 text-center">我的加血</h2>
+              <h3 class="font-white text-center">我的加血</h3>
             </div>
           </div>
       </div>  
@@ -54,7 +54,7 @@
           <div class="panel-in">
             <img src="../assets/333.png">
             <div class="font-middle">
-              <h2 class="font-white font-20 text-center">我的加血</h2>
+              <h3 class="font-white text-center">我的加血</h3>
             </div>
           </div>
       </div>  
@@ -147,9 +147,6 @@ export default {
 }
 .font-white{
 	color: #ffffff;
-}
-.font-20{
-	font-size: 20px;
 }
 
 
