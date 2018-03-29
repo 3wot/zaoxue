@@ -5,7 +5,7 @@
       <!-- <mt-button icon="more" slot="right"></mt-button> -->
     </mt-header>
 
-  <div class="content-in"
+  <div class="content-in">
       <div class="panel">
           <div class="panel-in">
             <img src="../assets/bg.png">
@@ -15,12 +15,16 @@
           </div>
       </div>
 
+
+      <MatePic v-for="item in pics" :pic="item" :key="item.index">
+  
+      </MatePic>
+
   </div>
 
 
-  <Mate-pic v-for="pic in pics" :pic-data="pic">
-    
-  </Mate-pic>
+
+  
 
 
 
@@ -33,7 +37,7 @@ import Router from 'vue-router'
 import { Header } from 'mint-ui'
 import { Tabbar, TabItem } from 'mint-ui'
 import { Cell } from 'mint-ui'
-import MatePic from './MatePic'
+import MatePic from '@/components/MatePic'
 
 
 
@@ -50,10 +54,10 @@ export default {
   name: 'Mate',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App';
+      msg: 'Welcome to Your Vue.js App',
       pics:[
         {
-          id:'001'
+          id:'001',
           name:'李金荣',
           img:'001.png',
           content:'好风景带来好心情！',
@@ -63,7 +67,7 @@ export default {
           }
         },
         {
-          id:'002'
+          id:'002',
           name:'琪琪',
           img:'001.png',
           content:'愿你有不老的心情',
@@ -73,7 +77,7 @@ export default {
           }
         },
         {
-          id:'001'
+          id:'001',
           name:'happy',
           img:'001.png',
           content:'请你一起来happy',
@@ -104,7 +108,7 @@ export default {
 }
 .mate .panel{
   width: 100%;
-  padding-top: 56.25%;
+  padding-top: 45%;
   position: relative;
 }
 .panel .panel-in{
@@ -137,8 +141,8 @@ export default {
     justify-content: center;
 }
 .img-f-70{
-  height: 70px !important;
-  width: 70px !important;
+  height: 4.5rem !important;
+  width: 4.5rem !important;
 }
 .mate-img{
   position: absolute;
