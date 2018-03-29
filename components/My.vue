@@ -13,7 +13,7 @@
 
     <div>
       <div class="line-b">
-        <mt-cell title="我的收藏" is-link to="/">
+        <mt-cell title="我的收藏" is-link to="/hello">
           <!-- <span></span> -->
           <img slot="icon" src="../assets/logo.png" width="24" height="24">
         </mt-cell>
