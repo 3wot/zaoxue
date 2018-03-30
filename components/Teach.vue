@@ -16,10 +16,10 @@
   		  	<img src="../assets/111.png">
   		  </mt-swipe-item>
   		  <mt-swipe-item>
-  		  	<img src="../assets/222.png">
+  		  	<img src="../assets/bg.png">
   		  </mt-swipe-item>
   		  <mt-swipe-item>
-  		  	<img src="../assets/333.png">
+  		  	<img src="../assets/logo.png">
   		  </mt-swipe-item>
   		</mt-swipe>
   		</div>
@@ -30,9 +30,9 @@
 		<div class="m-sm radius">
 			<div class="panel">
 			  	<div class="panel-in">
-			  		<img src="../assets/333.png">
+			  		<img src="../assets/bg.png">
 			  		<div class="font-middle">
-			  			<h3 class="font-white text-center">我的加血</h3>
+			  			<h3 class="font-white text-center">title1</h3>
 			  		</div>
 			  	</div>
 		  </div>	
@@ -41,9 +41,9 @@
     <div class="m-sm radius">
       <div class="panel">
           <div class="panel-in">
-            <img src="../assets/333.png">
+            <img src="../assets/bg.png">
             <div class="font-middle">
-              <h3 class="font-white text-center">我的加血</h3>
+              <h3 class="font-white text-center">title2</h3>
             </div>
           </div>
       </div>  
@@ -52,9 +52,9 @@
     <div class="m-sm radius">
       <div class="panel">
           <div class="panel-in">
-            <img src="../assets/333.png">
+            <img src="../assets/bg.png">
             <div class="font-middle">
-              <h3 class="font-white text-center">我的加血</h3>
+              <h3 class="font-white text-center">title3</h3>
             </div>
           </div>
       </div>  
