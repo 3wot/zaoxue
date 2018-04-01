@@ -12,12 +12,12 @@
     </div>
 
     <div>
-      <div class="line-b">
-        <mt-cell title="我的收藏" is-link to="/hello">
+      
+        <mt-cell title="我的收藏" is-link to="/MyCollection">
           <!-- <span></span> -->
           <img slot="icon" src="../assets/logo.png" width="24" height="24">
         </mt-cell>
-      </div>
+      
       
 
       <!-- <div class="line-b">
@@ -48,17 +48,17 @@
 </template>
 
 <script>
-import { Header } from 'mint-ui';
-import { Tabbar, TabItem } from 'mint-ui';
-import { Cell } from 'mint-ui';
+// import { Header } from 'mint-ui';
+// import { Tabbar, TabItem } from 'mint-ui';
+// import { Cell } from 'mint-ui';
 
 // Vue.component(Tabbar.name, Tabbar);
 // Vue.component(TabItem.name, TabItem);
 
 export default {
-  components:{
-    Header,Tabbar,TabItem,Cell
-  },
+  // components:{
+  //   Header,Tabbar,TabItem,Cell
+  // },
   name: 'My',
   data () {
     return {

@@ -13,7 +13,9 @@
   		<div class="panel-in">
   			<mt-swipe :auto="0">
   		  <mt-swipe-item>
-  		  	<img src="../assets/111.png">
+  		  	<router-link to="/TeachDetail/001">
+  		  		<img src="../assets/111.png">
+  		  	</router-link>
   		  </mt-swipe-item>
   		  <mt-swipe-item>
   		  	<img src="../assets/bg.png">
@@ -27,36 +29,42 @@
   	</div>
 
 
-		<div class="m-sm radius">
-			<div class="panel">
-			  	<div class="panel-in">
+	<div class="m-sm radius">
+		<div class="panel">
+			<router-link to="/teachtype/practice">
+				<div class="panel-in">
 			  		<img src="../assets/bg.png">
 			  		<div class="font-middle">
-			  			<h3 class="font-white text-center">title1</h3>
+			  			<h3 class="font-white text-center">社会实践</h3>
 			  		</div>
 			  	</div>
-		  </div>	
-		</div>
+			</router-link>
+	  	</div>	
+	</div>
 		
     <div class="m-sm radius">
       <div class="panel">
+      	<router-link to="/teachtype/science">
           <div class="panel-in">
             <img src="../assets/bg.png">
             <div class="font-middle">
-              <h3 class="font-white text-center">title2</h3>
+              <h3 class="font-white text-center">社会科学</h3>
             </div>
           </div>
+        </router-link>
       </div>  
     </div>
 
     <div class="m-sm radius">
       <div class="panel">
+      	<router-link to="/teachtype/culture">
           <div class="panel-in">
             <img src="../assets/bg.png">
             <div class="font-middle">
-              <h3 class="font-white text-center">title3</h3>
+              <h3 class="font-white text-center">文化遗产</h3>
             </div>
           </div>
+        </router-link>
       </div>  
     </div>
 
@@ -76,7 +84,7 @@
 import { Header } from 'mint-ui'
 import { Tabbar, TabItem } from 'mint-ui'
 import { Swipe, SwipeItem } from 'mint-ui'
-import { Cell } from 'mint-ui';
+import { Cell } from 'mint-ui'
 
 
 // Vue.component(Tabbar.name, Tabbar);

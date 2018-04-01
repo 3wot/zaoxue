@@ -1,32 +1,44 @@
 <template>
   <div class="mate-pic">
     <div class="mate-left">
-      <img class="img-r-70" src="../assets/person.png">
+      <img class="img-r-70" :src="pic.img">
     </div>
 
     <div class="mate-right">
       <p class="font-1e pic-name">{{pic.name}}</p>
-      <p class="font-1e pic-content">{{pic.name}}</p>
-      <h1>{{pic.name}}</h1>
-      <h2>{{pic.name}}</h2>
-      <h3>{{pic.name}}</h3>
-      <h4>{{pic.name}}</h4>
-      <h5>{{pic.name}}</h5>
-      <h6>{{pic.name}}</h6>
+      <p class="font-1e pic-content">{{pic.content}}</p>
+      
+      <PicImgContent :pics="pic.imglist"></PicImgContent>
+
+      <div class="pic-date">
+        <span class="font-8e font-b">2018-03-23 12:22:23</span>
+        <img src="../assets/logo.png" class="pic-zan pull-right">
+      </div>
+
+      <div class="pic-comment-list">
+        <img src="../assets/logo.png" class="pic-zan">
+        <span class="font-8e pic-name" v-for="(val,key,index) in pic.commentList" v-show="val" :key="index">{{key}}{{index==Object.keys(pic.commentList).length-1?"":","}}
+        </span>
+        
+      </div>
 
 
 
     </div>
 
 
-
+    <div style="clear:both;height:0px;"></div>
 
   </div>
 </template>
 
 <script>
+import PicImgContent from '@/components/PicImgContent'
+
 export default {
-  
+  components:{
+    PicImgContent
+  },
   name: 'MatePic',
   props: ['pic'],
   data () {
@@ -64,11 +76,29 @@ export default {
   margin: 0px;
 }
 .pic-name{
-  color:#dddddd;
+  color:#999999;
   margin-bottom: .7rem !important;
 }
 .pic-content{
   color: #000000;
+}
+.font-8e{
+  font-size: .8rem
+}
+.font-b{
+  color: #bbbbbb;
+}
+.pic-zan{
+  height: .8rem;
+  width: .8rem;
+  
+}
+.pull-right{
+  float: right;
+}
+.pic-comment-list{
+  background-color: #dddddd;
+  padding:3px 5px;
 }
 
 </style>

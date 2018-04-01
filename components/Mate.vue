@@ -34,9 +34,9 @@
 
 <script>
 import Router from 'vue-router'
-import { Header } from 'mint-ui'
-import { Tabbar, TabItem } from 'mint-ui'
-import { Cell } from 'mint-ui'
+// import { Header } from 'mint-ui'
+// import { Tabbar, TabItem } from 'mint-ui'
+// import { Cell } from 'mint-ui'
 import MatePic from '@/components/MatePic'
 
 
@@ -49,7 +49,7 @@ import MatePic from '@/components/MatePic'
 
 export default {
   components:{
-    Header,Tabbar,TabItem,Cell,MatePic
+    MatePic
   },
   name: 'Mate',
   data () {
@@ -59,7 +59,8 @@ export default {
         {
           id:'001',
           name:'李金荣',
-          img:'001.png',
+          img:'./static/111.png',
+          imglist:['./static/person.png','./static/bg.png','./static/bg.png','./static/bg.png','./static/333.png'],
           content:'好风景带来好心情！',
           commentList:{
             '张静来':true,
@@ -69,17 +70,19 @@ export default {
         {
           id:'002',
           name:'琪琪',
-          img:'001.png',
+          img:'./static/person.png',
+          imglist:['./static/bg.png'],
           content:'愿你有不老的心情',
           commentList:{
-            '阿达':true,
+            '阿达':false,
             '鱼王':true,
           }
         },
         {
           id:'001',
           name:'happy',
-          img:'001.png',
+          img:'./static/bg.png',
+          imglist:[],
           content:'请你一起来happy',
           commentList:{
             '小姐姐':true,

@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import $ from 'jquery'
 // frozenui
 // import '@/style/frozenui.css'
 // mint-ui
@@ -21,5 +22,10 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  data:{
+  	user:{
+  		name:'jjw'
+  	}
+  }
 })
