@@ -9,9 +9,41 @@
           <div class="panel-in">
               <img :src="item.img">
               <div class="font-bottom">
-
                 <h4 class="font-white font-1e panel-b-title">{{item.title}}</h4>
+
+
+                <div class="panel-t-title">
+                  <router-link to="/" slot="left">
+                    <!-- <div style="width:25px;height25px;background-color:rgba(255,255,255,0.7);"> -->
+                      <span style="line-height: 25px;
+                          display: inline-block;
+                          background-color: rgba(255, 255, 255, 0.701961);
+                          border-radius: 25px;
+                          width: 25px;
+                          height: 25px;
+                          padding: 4px;
+                          text-align: center;
+                          margin-top: 5px;" class="mintui mintui-back"></span>
+                    <!-- </div> -->
+                  </router-link>
+<!-- 
+                      <span style="line-height: 25px;
+                          display: inline-block;
+                          background-color: rgba(255, 255, 255, 0.701961);
+                          border-radius: 25px;
+                          width: 25px;
+                          height: 25px;
+                          padding: 4px;
+                          text-align: center;
+                          margin-top: 5px;" class="mintui mintui-back">
+                            
+                          </span> -->
+                  <img src="../assets/star.png" style="margin:10px;float:right;width:25px;height:25px;">
+                </div>
               </div>
+
+              
+
           </div>
 
         </div>
@@ -54,7 +86,11 @@
 
           </mt-tab-container-item>
           <mt-tab-container-item id="2" style="padding:1rem;">
-            asdasdasdasdasdasdasdasdasd
+            <pre>
+              {{item.tip}}
+
+            </pre>
+              
 
 
           </mt-tab-container-item>
@@ -83,94 +119,68 @@ export default {
       teachCourseList:[
       	{
           id:'001',
-      		title: "社会实践-世界青少年夏令营",
-      		img:'./static/bg.png',
+      		title: "未来领袖成长营--城市生存大挑战",
+      		img:'./static/teach004.png',
       		type:"practice",
       		price:180,
           for:'18以内',
           introduce:'5元能做什么？也许是一包零食，或许是一瓶饮料，甚至就是一包烟的钱，今天我们将让你您的孩子拿着5元钱，完成一系列的城市生存挑战。',
           provider:"服务商：早学网旗舰店",
-          address:"地址：北京市海淀区清华大学",
-          tip:"1.5元钱生存资金\n2.一个便携式背包\n3.一个收纳袋子\n4.一瓶矿泉水",
+          address:"地址：北京市中国国家博物馆",
+          tip:"\n1.5元钱生存资金\n2.一个便携式背包\n3.一个收纳袋子\n4.一瓶矿泉水",
           comments:[]
 
       	},
       	{
           id:'002',
-      		title: "社会实践-青少年FE大赛",
-      		img:'./static/bg.png',
-      		type:"practice",
+      		title: "中国特种工艺制作非物质文化遗产--青铜器",
+      		img:'./static/teach005.png',
+      		type:"culture",
       		price:80,
           for:'18以内',
-          introduce:'5元能做什么？也许是一包零食，或许是一瓶饮料，甚至就是一包烟的钱，今天我们将让你您的孩子拿着5元钱，完成一系列的城市生存挑战。',
+          introduce:'参观青铜器的制作过程，学习了解古代劳动人命的智慧。通过这里对我国悠久的历史，深厚的文化底蕴形成认知。',
           provider:"服务商：早学网旗舰店",
-          address:"地址：青岛市崂山区中国海洋大学",
-          tip:"1.5元钱生存资金\n2.一个便携式背包\n3.一个收纳袋子\n4.一瓶矿泉水",
+          address:"地址：山西省太原市省博物馆",
+          tip:"\n1.一个便携式背包\n2.一瓶矿泉水",
           comments:[]
       	},
       	{
           id:'003',
-      		title: "社会实践-oppo手机观世界",
-      		img:'./static/bg.png',
-      		type:"practice",
+      		title: "海洋馆一日参观",
+      		img:'./static/teach006.png',
+      		type:"science",
       		price:280,
           for:'18以内',
-          introduce:'5元能做什么？也许是一包零食，或许是一瓶饮料，甚至就是一包烟的钱，今天我们将让你您的孩子拿着5元钱，完成一系列的城市生存挑战。',
+          introduce:'北京市海洋馆是以展示七大海洋生物为主。集科普，观赏，旅游，娱乐于一体的爱国主义教育基地。',
           provider:"服务商：早学网旗舰店",
-          address:"地址：北京市海淀区清华大学",
-          tip:"1.5元钱生存资金\n2.一个便携式背包\n3.一个收纳袋子\n4.一瓶矿泉水",
+          address:"地址：北京市动物园",
+          tip:"\n1.一个便携式背包\n2.一个收纳袋子\n3.一瓶矿泉水",
           comments:[]
       	},
       	{
           id:'004',
-      		title: "社会科学-原来如此",
-      		img:'./static/bg.png',
+      		title: "舌尖上的美味--蔬菜的故事",
+      		img:'./static/teach008.png',
       		type:"science",
       		price:598,
           for:'18以内',
-          introduce:'5元能做什么？也许是一包零食，或许是一瓶饮料，甚至就是一包烟的钱，今天我们将让你您的孩子拿着5元钱，完成一系列的城市生存挑战。',
+          introduce:'舌尖上的中国，介绍了我国大江南北各地的美食，你知道吗，美食背后是一种种颜色种类各异的蔬菜，它们又有怎样的故事呢？',
           provider:"服务商：早学网旗舰店",
-          address:"地址：北京市海淀区清华大学",
-          tip:"1.5元钱生存资金\n2.一个便携式背包\n3.一个收纳袋子\n4.一瓶矿泉水",
+          address:"地址：北京市植物园",
+          tip:"\n1.一个便携式背包\n2.一个收纳袋子\n3.一瓶矿泉水",
           comments:[]
       	},
       	{
           id:'005',
-      		title: "社会实践-科学家的日常",
-      		img:'./static/bg.png',
-      		type:"science",
+      		title: "儿童舞蹈夏令营",
+      		img:'./static/teach007.png',
+      		type:"practice",
       		price:480,
           for:'18以内',
-          introduce:'5元能做什么？也许是一包零食，或许是一瓶饮料，甚至就是一包烟的钱，今天我们将让你您的孩子拿着5元钱，完成一系列的城市生存挑战。',
+          introduce:'炎炎夏日，您还在为孩子报各种补习班吗？累了大人，苦了孩子，何不让孩子试试舞蹈呢！',
           provider:"服务商：早学网旗舰店",
-          address:"地址：北京市海淀区清华大学",
-          tip:"1.5元钱生存资金\n2.一个便携式背包\n3.一个收纳袋子\n4.一瓶矿泉水",
-          comments:[]
-      	},
-      	{
-          id:'006',
-      		title: "社会实践-汝窑文化",
-      		img:'./static/bg.png',
-      		type:"culture",
-      		price:465,
-          for:'18以内',
-          introduce:'5元能做什么？也许是一包零食，或许是一瓶饮料，甚至就是一包烟的钱，今天我们将让你您的孩子拿着5元钱，完成一系列的城市生存挑战。',
-          provider:"服务商：早学网旗舰店",
-          address:"地址：北京市海淀区清华大学",
-          tip:"1.5元钱生存资金\n2.一个便携式背包\n3.一个收纳袋子\n4.一瓶矿泉水",
-          comments:[]
-      	},
-      	{
-          id:'007',
-      		title: "社会实践-诺贝奖的前世今生",
-      		img:'./static/bg.png',
-      		type:"science",
-      		price:245,
-          for:'18以内',
-          introduce:'5元能做什么？也许是一包零食，或许是一瓶饮料，甚至就是一包烟的钱，今天我们将让你您的孩子拿着5元钱，完成一系列的城市生存挑战。',
-          provider:"服务商：早学网旗舰店",
-          address:"北京市",
-          tip:"1.5元钱生存资金\n2.一个便携式背包\n3.一个收纳袋子\n4.一瓶矿泉水",
+          address:"地址：北京市海淀区北京邮电大学",
+          tip:"1.一个便携式背包\n2.一个收纳袋子",
           comments:[]
       	}
       ],
@@ -224,6 +234,14 @@ export default {
   overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.panel-t-title{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  padding: 0px 1rem;
 }
 .font-1e{
   font-size: 1rem;

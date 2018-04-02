@@ -1,17 +1,30 @@
 
 <template>
-  <div class="teach-type">
-      <!-- 顶部 -->
-	  <mt-header fixed :title="typeObj[$route.params.type]">
-	  	  <router-link to="/" slot="left">
-		    <mt-button icon="back"></mt-button>
-		  </router-link>
+  <div class="search">
+    
+    <!-- 顶部 -->
+    <div class="search-header">
+      <router-link to="/" slot="left">
+        <span style="line-height:52px;" class="mintui mintui-back"></span>
+      </router-link>
 
-	  </mt-header>
+      <div class="header-right">
+        <mt-search
+            v-model="searchText"
+            cancel-text="取消"
+            placeholder="喜欢的主题活动">
+        </mt-search>  
 
+      </div>
+      
+
+    </div>
+
+	  
+    <!-- searchlist -->
 	  <div class="content-in">
 	  	
-	  	<div class="m-sm radius" v-for="item in teachCourseList" v-if="item.type==$route.params.type">
+	  	<div class="m-sm radius" v-for="item in teachCourseList">
 			<div class="panel">
 				<router-link :to="{ name: 'teachdetail', params: { id: item.id }}">
 					<div class="panel-in">
@@ -33,21 +46,18 @@
 
 <script>
 import { Header } from 'mint-ui'
+import { Search } from 'mint-ui'
 
 export default {
   components:{
-    Header
+    Header,Search
   },
-  name: 'TeachType',
+  name: 'Search',
   data () {
     return {
-      typeObj:{
-      	practice:"社会实践",
-      	science:"社会科学",
-      	culture:"文化遗产"
-      },
+      searchText:'',
       teachCourseList:[
-      	{
+        {
           id:'001',
           title: "未来领袖成长营--城市生存大挑战",
           img:'./static/teach004.png',
@@ -113,7 +123,7 @@ export default {
           tip:"1.一个便携式背包\n2.一个收纳袋子",
           comments:[]
         }
-      ]
+      ],
     }
   }
 }
@@ -137,7 +147,7 @@ export default {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: 40px;
+  top: 52px;
   bottom: 0px;
   overflow: auto;
   background-color: #fdfdfd;
@@ -175,5 +185,21 @@ export default {
 }
 .font-1e{
 	font-size: 1rem;
+}
+
+.search{
+
+}
+.search-header{
+  height: 52px;
+  background-color: #d9d9d9;
+  padding-left: 10px;
+}
+.header-right{
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
 }
 </style>

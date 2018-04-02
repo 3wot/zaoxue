@@ -10,9 +10,6 @@
 	  </mt-header>
 
 	  <div id="map" class="content-in">
-	  	
-	  	
-
 
 
 	  </div>
@@ -64,7 +61,7 @@ export default {
   	  // });
 	  let mp = new BMap.Map('map');
 	  // mp.centerAndZoom(new BMap.Point(121.491, 31.233), 11);  
-	  mp.centerAndZoom(address, 15); 
+	  mp.centerAndZoom(address, 17); 
 	},
 	loadScript:function() {
 

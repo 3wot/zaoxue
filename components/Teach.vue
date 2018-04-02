@@ -2,10 +2,21 @@
   <div class="teach">
 
   <!-- 顶部 -->
-  <mt-header fixed title="固定在顶部">
+<!--   <mt-header title="">
   	
+    <span>sdasdaweqwe</span>
 
-  </mt-header>
+
+  </mt-header> -->
+  <div @click="clickHandle">
+    <mt-search
+      v-model="searchText"
+      cancel-text="取消"
+      placeholder="喜欢的主题活动">
+    </mt-search>
+  </div>
+    
+
 
   <div class="content-in">
 
@@ -14,18 +25,21 @@
   			<mt-swipe :auto="0">
   		  <mt-swipe-item>
   		  	<router-link to="/TeachDetail/001">
-  		  		<img src="../assets/111.png">
+  		  		<img src="../assets/teach004.png">
   		  	</router-link>
   		  </mt-swipe-item>
   		  <mt-swipe-item>
-  		  	<img src="../assets/bg.png">
+          <router-link to="/TeachDetail/002">
+  		  	<img src="../assets/teach005.png">
+        </router-link>
   		  </mt-swipe-item>
   		  <mt-swipe-item>
-  		  	<img src="../assets/logo.png">
+          <router-link to="/TeachDetail/003">
+  		  	<img src="../assets/teach006.png">
+        </router-link>
   		  </mt-swipe-item>
   		</mt-swipe>
   		</div>
-      
   	</div>
 
 
@@ -33,7 +47,7 @@
 		<div class="panel">
 			<router-link to="/teachtype/practice">
 				<div class="panel-in">
-			  		<img src="../assets/bg.png">
+			  		<img src="../assets/teach001.png">
 			  		<div class="font-middle">
 			  			<h3 class="font-white text-center">社会实践</h3>
 			  		</div>
@@ -46,7 +60,7 @@
       <div class="panel">
       	<router-link to="/teachtype/science">
           <div class="panel-in">
-            <img src="../assets/bg.png">
+            <img src="../assets/teach002.png">
             <div class="font-middle">
               <h3 class="font-white text-center">社会科学</h3>
             </div>
@@ -59,7 +73,7 @@
       <div class="panel">
       	<router-link to="/teachtype/culture">
           <div class="panel-in">
-            <img src="../assets/bg.png">
+            <img src="../assets/teach003.png">
             <div class="font-middle">
               <h3 class="font-white text-center">文化遗产</h3>
             </div>
@@ -81,10 +95,12 @@
 </template>
 
 <script>
+import Router from 'vue-router'
 import { Header } from 'mint-ui'
 import { Tabbar, TabItem } from 'mint-ui'
 import { Swipe, SwipeItem } from 'mint-ui'
 import { Cell } from 'mint-ui'
+import { Search } from 'mint-ui'
 
 
 // Vue.component(Tabbar.name, Tabbar);
@@ -92,12 +108,17 @@ import { Cell } from 'mint-ui'
 
 export default {
   components:{
-    Header,Tabbar,TabItem,Swipe,SwipeItem,Cell
+    Header,Tabbar,TabItem,Swipe,SwipeItem,Cell,Search
   },
   name: 'Teach',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      searchText:"",
+    }
+  },
+  methods:{
+    clickHandle(){
+      this.$router.push({name:'search'});
     }
   }
 }
@@ -128,7 +149,7 @@ export default {
   position: absolute;
   left: 0px;
   right: 0px;
-  top: 40px;
+  top: 52px;
   bottom: 0px;
   overflow: auto;
 }
