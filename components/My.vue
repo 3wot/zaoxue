@@ -5,8 +5,8 @@
         <div class="panel-in">
           <img src="../assets/bg.png">
           <div class="font-middle">
-            <img class="img-r-70" src="../assets/person.png">
-            <h2 class="font-white">登录</h2>
+            <img class="img-r-70" src="../assets/p001.png">
+            <!-- <h2 class="font-white">登录</h2> -->
           </div>
         </div>
     </div>

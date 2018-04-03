@@ -14,7 +14,6 @@
 
                 <div class="panel-t-title">
                   <router-link to="/" slot="left">
-                    <!-- <div style="width:25px;height25px;background-color:rgba(255,255,255,0.7);"> -->
                       <span style="line-height: 25px;
                           display: inline-block;
                           background-color: rgba(255, 255, 255, 0.701961);
@@ -24,20 +23,7 @@
                           padding: 4px;
                           text-align: center;
                           margin-top: 5px;" class="mintui mintui-back"></span>
-                    <!-- </div> -->
                   </router-link>
-<!-- 
-                      <span style="line-height: 25px;
-                          display: inline-block;
-                          background-color: rgba(255, 255, 255, 0.701961);
-                          border-radius: 25px;
-                          width: 25px;
-                          height: 25px;
-                          padding: 4px;
-                          text-align: center;
-                          margin-top: 5px;" class="mintui mintui-back">
-                            
-                          </span> -->
                   <img src="../assets/star.png" style="margin:10px;float:right;width:25px;height:25px;">
                 </div>
               </div>

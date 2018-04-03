@@ -19,37 +19,64 @@
           
           <mt-tab-container-item id="1">
             
-            <div class="panel">
-              <div class="panel-in">
-                  <div class="panel-left">
-                    <div class="left-img">
-                      <img src="../assets/bg.png"/>
+            <div class="panel" v-for="item in courseList" v-if='item.type=="PM"' :key="item.index">
+              <router-link :to="{ name: 'coursedetail', params: { id: item.id }}">
+                    <div class="panel-in">
+                        <div class="panel-left">
+                          <div class="left-img">
+                            <img :src="item.img"/>
+                          </div>
+                        </div>
+
+                        <div class="panel-right">
+                           <p class="right-title">
+                             {{item.introduce}}
+                           </p>
+                           <p style="margin:0px;">
+                             <span class="right-span" v-if="item.isback">回放</span>
+                           </p>
+
+                           <p class="price">
+                             <span class="price-span" v-if="!item.isfree">¥ {{item.price}}</span>
+                             <span class="free-span" v-if="item.isfree">免费</span>
+                           </p>
+
+                        </div>
                     </div>
-                  </div>
-
-                  <div class="panel-right">
-                     <p class="right-title">
-                       技术MOOC技术MOOC技术MOOC技术MOOC技术MOOC技术MOOC技术MOOC技术MOOC
-                     </p>
-                     <p style="margin:0px;">
-                       <span class="right-span">资料</span>
-                       <span class="right-span">回放</span>
-                     </p>
-
-                     <p class="price">
-                       <span class="price-span">¥ 4600</span>
-                       <span class="free-span">免费</span>
-                     </p>
-
-                  </div>
-              </div>
+                  </router-link>
             </div> 
 
           </mt-tab-container-item>
 
 
           <mt-tab-container-item id="2">
-            
+           
+            <div class="panel" v-for="item in courseList" v-if='item.type=="CD"' :key="item.index">
+              <router-link :to="{ name: 'coursedetail', params: { id: item.id }}">
+                <div class="panel-in">
+                    <div class="panel-left">
+                      <div class="left-img">
+                        <img :src="item.img"/>
+                      </div>
+                    </div>
+
+                    <div class="panel-right">
+                       <p class="right-title">
+                         {{item.introduce}}
+                       </p>
+                       <p style="margin:0px;">
+                         <span class="right-span" v-if="item.isback">回放</span>
+                       </p>
+
+                       <p class="price">
+                         <span class="price-span" v-if="!item.isfree">¥ {{item.price}}</span>
+                         <span class="free-span" v-if="item.isfree">免费</span>
+                       </p>
+
+                    </div>
+                </div>
+              </router-link>
+            </div> 
 
 
           </mt-tab-container-item>
@@ -88,6 +115,39 @@ export default {
   data () {
     return {
       selected:'1',
+      courseList:[
+        {
+          id:'course001',
+          title: "摄影对产品的影响",
+          img:'./static/course001.png',
+          type:"PM",
+          price:180,
+          isfree:true,
+          isback:false,
+          introduce:'互联网时代，一个产品经理对于一个产品的重要性不言而喻，那么一个懂得摄影的产品经理对于产品又有什么样的影响呢？',
+        },
+        {
+          id:'course002',
+          title: "良好沟通的重要性",
+          img:'./static/course002.png',
+          type:"PM",
+          price:4600,
+          isback:true,
+          isfree:false,
+          introduce:'如何友好的沟通，如何沟通获取有用的信息，这是一个人人都关心的问题！',
+
+        },
+        {
+          id:'course003',
+          title: "JAVA的那些事",
+          img:'./static/course003.png',
+          type:"CD",
+          price:8000,
+          isback:true,
+          isfree:false,
+          introduce:'JAVA的各种生态，一个新手如何慢慢成长为大牛...',
+        }
+      ]
     }
   }
 }

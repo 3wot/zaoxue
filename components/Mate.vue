@@ -10,13 +10,13 @@
           <div class="panel-in">
             <img src="../assets/bg.png">
             
-            <img class="img-f-70 mate-img" src="../assets/person.png">
+            <img class="img-f-70 mate-img" src="../assets/p001.png">
             
           </div>
       </div>
 
 
-      <MatePic v-for="item in pics" :pic="item" @zan="zan(item.index)" :key="item.index">
+      <MatePic v-for="(item,index) in pics" :pic="item" @zan="fnZan(item)" :key="item.index">
         
       </MatePic>
 
@@ -96,15 +96,15 @@ export default {
     }
   },
   methods:{
-    zan(index){
-      console.log('aaa');
-      console.log(index);
+    fnZan(idx){
       let user = this.userInfo;
-      if(this.pics[index].commentList[user.name]){
-        this.pics[index].commentList[user.name] = false;
-      }else{
-        this.pics[index].commentList[user.name] = true;
-      }
+      // if(this.pics[idx].commentList[user.name]){
+      //   this.pics[idx].commentList[user.name] = false;
+      // }else{
+      //   this.pics[idx].commentList[user.name] = true;
+      // }
+      // console.log(this.pics[idx].commentList);
+      // console.log(idx);
     }
   }
 

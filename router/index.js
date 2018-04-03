@@ -7,6 +7,7 @@ import MapDetail from '@/components/MapDetail'
 import MyCollection from '@/components/MyCollection'
 import Search from '@/components/Search'
 import Login from '@/components/Login'
+import CourseDetail from '@/components/CourseDetail'
 import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
@@ -47,6 +48,11 @@ export default new Router({
       path: '/Login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/CourseDetail/:id',
+      name: 'coursedetail',
+      component: CourseDetail
     },
     {
       path: '/hello',
