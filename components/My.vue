@@ -17,23 +17,6 @@
           <!-- <span></span> -->
           <img slot="icon" src="../assets/logo.png" width="24" height="24">
         </mt-cell>
-      
-      
-
-      <!-- <div class="line-b">
-        <mt-cell title="标题文字" is-link>
-          <span>我的</span>
-          <img slot="icon" src="../assets/logo.png" width="24" height="24">
-        </mt-cell>
-      </div>
-      
-      <div class="line-b">
-        <mt-cell title="标题文字" is-link>
-          <span>我的</span>
-          <img slot="icon" src="../assets/logo.png" width="24" height="24">
-        </mt-cell>
-      </div>
- -->
 
     </div>
 
@@ -48,26 +31,14 @@
 </template>
 
 <script>
-// import { Header } from 'mint-ui';
-// import { Tabbar, TabItem } from 'mint-ui';
-// import { Cell } from 'mint-ui';
-
-// Vue.component(Tabbar.name, Tabbar);
-// Vue.component(TabItem.name, TabItem);
 
 export default {
-  // components:{
-  //   Header,Tabbar,TabItem,Cell
-  // },
   name: 'My',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
     }
   }
-
-
-
 }
 </script>
 

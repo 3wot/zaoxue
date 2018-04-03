@@ -16,8 +16,8 @@
       </div>
 
 
-      <MatePic v-for="item in pics" :pic="item" :key="item.index">
-  
+      <MatePic v-for="item in pics" :pic="item" @zan="zan(item.index)" :key="item.index">
+        
       </MatePic>
 
   </div>
@@ -59,9 +59,10 @@ export default {
         {
           id:'001',
           name:'李金荣',
-          img:'./static/111.png',
-          imglist:['./static/person.png','./static/bg.png','./static/bg.png','./static/bg.png','./static/333.png'],
-          content:'好风景带来好心情！',
+          img:'./static/p001.png',
+          imglist:['./static/mate1-1.png','./static/mate1-2.png','./static/mate1-3.png','./static/mate1-4.png','./static/mate1-5.png','./static/mate1-6.png','./static/mate1-7.png','./static/mate1-8.png','./static/mate1-9.png'],
+          content:'好风景！好风景！好风景！好心情！好心情！好心情！重要事情来三遍...',
+          time:"2018-02-01 12:02:20",
           commentList:{
             '张静来':true,
             '高飞':true,
@@ -70,20 +71,22 @@ export default {
         {
           id:'002',
           name:'琪琪',
-          img:'./static/person.png',
-          imglist:['./static/bg.png'],
-          content:'愿你有不老的心情',
+          img:'./static/p002.png',
+          imglist:['./static/mate2-1.png'],
+          content:'愿生命如烟花一般，刹那芳华，风采绽放！',
+          time:"2018-02-01 12:06:20",
           commentList:{
             '阿达':false,
             '鱼王':true,
           }
         },
         {
-          id:'001',
+          id:'003',
           name:'happy',
-          img:'./static/bg.png',
-          imglist:[],
+          img:'./static/p003.png',
+          imglist:['./static/mate3-1.png','./static/mate3-2.png','./static/mate3-3.png','./static/mate3-4.png'],
           content:'请你一起来happy',
+          time:"2018-02-01 12:08:20",
           commentList:{
             '小姐姐':true,
             '大飞':true,
@@ -93,7 +96,16 @@ export default {
     }
   },
   methods:{
-    
+    zan(index){
+      console.log('aaa');
+      console.log(index);
+      let user = this.userInfo;
+      if(this.pics[index].commentList[user.name]){
+        this.pics[index].commentList[user.name] = false;
+      }else{
+        this.pics[index].commentList[user.name] = true;
+      }
+    }
   }
 
   

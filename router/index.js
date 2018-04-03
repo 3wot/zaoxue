@@ -6,6 +6,7 @@ import TeachDetail from '@/components/TeachDetail'
 import MapDetail from '@/components/MapDetail'
 import MyCollection from '@/components/MyCollection'
 import Search from '@/components/Search'
+import Login from '@/components/Login'
 import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
@@ -41,6 +42,11 @@ export default new Router({
       path: '/Search',
       name: 'search',
       component: Search
+    },
+    {
+      path: '/Login',
+      name: 'login',
+      component: Login
     },
     {
       path: '/hello',

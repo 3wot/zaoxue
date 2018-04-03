@@ -15,6 +15,11 @@ import router from './router'
 
 Vue.use(MintUI)
 
+Vue.prototype.userInfo = {
+	name:'夏天',
+	uid:"xiatian",
+}
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

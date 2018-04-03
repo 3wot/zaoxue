@@ -1,15 +1,14 @@
 <template>
   <div class="pic-img-content">
-      <div v-for="item in pics" class="img-outer">
+      <div v-for="item in pics" v-if="pics.length>1" class="img-outer">
         <div class="img-iner">
           <img class="" :src="item"/>
         </div>
-        
-
       </div>
 
-
-
+      <div v-if="pics.length==1">
+        <img :src="pics[0]" style="width:50%;height:50%;">
+      </div>
 
 
       <div style="clear:both;"></div>

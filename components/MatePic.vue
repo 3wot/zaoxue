@@ -11,12 +11,12 @@
       <PicImgContent :pics="pic.imglist"></PicImgContent>
 
       <div class="pic-date">
-        <span class="font-8e font-b">2018-03-23 12:22:23</span>
-        <img src="../assets/logo.png" class="pic-zan pull-right">
+        <span class="font-8e font-b">{{pic.time}}</span>
+        <img src="../assets/ok.png" @click="zan(pic)" class="pic-zan pull-right">
       </div>
 
       <div class="pic-comment-list">
-        <img src="../assets/logo.png" class="pic-zan">
+        <img src="../assets/ok.png" class="pic-zan">
         <span class="font-8e pic-name" v-for="(val,key,index) in pic.commentList" v-show="val" :key="index">{{key}}{{index==Object.keys(pic.commentList).length-1?"":","}}
         </span>
         
@@ -44,6 +44,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
+    }
+  },
+  methods:{
+    zan(item){
+      this.$emit('zan');
     }
   }
 }
@@ -90,7 +95,7 @@ export default {
 }
 .pic-zan{
   height: .8rem;
-  width: .8rem;
+  width: 1rem;
   
 }
 .pull-right{
