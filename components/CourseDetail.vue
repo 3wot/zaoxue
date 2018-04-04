@@ -180,9 +180,7 @@ export default {
   },
   methods:{
     clickCell(cc){
-
       let url = cc.link;
-      console.log(url)
       this.showVideo = true;
       this.videoSrc = url;
     }

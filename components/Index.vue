@@ -8,20 +8,20 @@
     <!-- 底部 -->
     <mt-tabbar v-model="selectId">
         <mt-tab-item id="Teach">
-          <img slot="icon" src="../assets/logo.png">
+          <img slot="icon" src="../assets/logo1.png">
           教学活动
         </mt-tab-item>
       <!-- </router-link> -->
       <mt-tab-item id="Mate">
-        <img slot="icon" src="../assets/logo.png">
+        <img slot="icon" src="../assets/logo2.png">
         同学圈
       </mt-tab-item>
       <mt-tab-item id="Course">
-        <img slot="icon" src="../assets/logo.png">
+        <img slot="icon" src="../assets/logo3.png">
         课件
       </mt-tab-item>
       <mt-tab-item id="My">
-        <img slot="icon" src="../assets/logo.png">
+        <img slot="icon" src="../assets/logo4.png">
         我的
       </mt-tab-item>
     </mt-tabbar>

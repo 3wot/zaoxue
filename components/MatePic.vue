@@ -17,7 +17,8 @@
 
       <div class="pic-comment-list">
         <img src="../assets/ok.png" class="pic-zan">
-        <span class="font-8e pic-name" v-for="(val,key,index) in pic.commentList" v-show="val" :key="index">{{key}}{{index==Object.keys(pic.commentList).length-1?"":","}}
+        <span class="font-8e pic-name" v-for="(val,key,index) in pic.commentList" v-show="val" :key="index">{{key}}
+          {{index==Object.keys(pic.commentList).length-1?"":","}}
         </span>
         <!-- <span>{{pic.commentList}}</span> -->
       </div>

@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="panel-right">
-                       <p class="right-title">
+                       <p class="right-title" style="display:-webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;">
                          {{item.introduce}}
                        </p>
                        <p style="margin:0px;">

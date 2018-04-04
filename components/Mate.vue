@@ -16,7 +16,7 @@
       </div>
 
 
-      <MatePic v-for="(item,index) in pics" :pic="item" @zan="fnZan(item)" :key="item.index">
+      <MatePic v-for="(item,index) in pics" :pic="item" @zan="fnZan(index)" :key="item.index">
         
       </MatePic>
 
@@ -33,19 +33,9 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import Router from 'vue-router'
-// import { Header } from 'mint-ui'
-// import { Tabbar, TabItem } from 'mint-ui'
-// import { Cell } from 'mint-ui'
 import MatePic from '@/components/MatePic'
-
-
-
-
-
-
-// Vue.component(Tabbar.name, Tabbar);
-// Vue.component(TabItem.name, TabItem);
 
 export default {
   components:{
@@ -98,13 +88,11 @@ export default {
   methods:{
     fnZan(idx){
       let user = this.userInfo;
-      // if(this.pics[idx].commentList[user.name]){
-      //   this.pics[idx].commentList[user.name] = false;
-      // }else{
-      //   this.pics[idx].commentList[user.name] = true;
-      // }
-      // console.log(this.pics[idx].commentList);
-      // console.log(idx);
+      let newCommentList = this.pics[idx].commentList;
+      newCommentList[user.name] = !newCommentList[user.name];
+      this.pics[idx].commentList = newCommentList;
+      let {...item} = this.pics[idx];
+      this.pics.splice(idx,1,item);
     }
   }
 
